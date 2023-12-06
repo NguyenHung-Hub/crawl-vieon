@@ -1,0 +1,97 @@
+package models
+
+type Content struct {
+	ID                    uint    `json:"id" gorm:"primaryKey;autoIncrement"`
+	CategoryName          string  `json:"category_name" gorm:"column:category_name;"`
+	CategoryID            string  `json:"category_id" gorm:"column:category_id;"`
+	RibbonID              string  `json:"ribbon_id" gorm:"column:ribbon_id;size:42"`
+	ContentID             string  `json:"content_id" gorm:"column:content_id"`
+	GroupID               string  `json:"group_id" gorm:"column:group_id"`
+	KnownAs               string  `json:"known_as" gorm:"column:known_as"`
+	Type                  int64   `json:"type" gorm:"column:type"`
+	Title                 string  `json:"title" gorm:"column:title"`
+	CustomAds             string  `json:"custom_ads" gorm:"column:custom_ads"`
+	EnableAds             int64   `json:"enable_ads" gorm:"column:enable_ads"`
+	ShortDescription      string  `json:"short_description" gorm:"column:short_description"`
+	LongDescription       string  `json:"long_description" gorm:"column:long_description"`
+	Resolution            int64   `json:"resolution" gorm:"column:resolution"`
+	Runtime               int64   `json:"runtime" gorm:"column:runtime"`
+	IsPremium             int64   `json:"is_premium" gorm:"column:is_premium"`
+	IsNew                 int64   `json:"is_new" gorm:"column:is_new"`
+	IsTrailer             int64   `json:"is_trailer" gorm:"column:is_trailer"`
+	ReleaseYear           int64   `json:"release_year" gorm:"column:release_year"`
+	ThumbnailHotV4        string  `json:"thumbnail_hot_v4" gorm:"column:thumbnail_hot_v4"`
+	ThumbnailBigV4        string  `json:"thumbnail_big_v4" gorm:"column:thumbnail_big_v4"`
+	CarouselWebV4         string  `json:"carousel_web_v4" gorm:"column:carousel_web_v4"`
+	ThumbnailV4           string  `json:"thumbnail_v4" gorm:"column:thumbnail_v4"`
+	PosterV4              string  `json:"poster_v4" gorm:"column:poster_v4"`
+	TitleCardLight        string  `json:"title_card_light" gorm:"column:title_card_light"`
+	TitleCardDark         string  `json:"title_card_dark" gorm:"column:title_card_dark"`
+	ThumbnailHotV4Ntc     string  `json:"thumbnail_hot_v4_ntc" gorm:"column:thumbnail_hot_v4_ntc"`
+	ThumbnailBigV4Ntc     string  `json:"thumbnail_big_v4_ntc" gorm:"column:thumbnail_big_v4_ntc"`
+	CarouselWebV4Ntc      string  `json:"carousel_web_v4_ntc" gorm:"column:carousel_web_v4_ntc"`
+	ThumbnailV4Ntc        string  `json:"thumbnail_v4_ntc" gorm:"column:thumbnail_v4_ntc"`
+	AvgRate               float64 `json:"avg_rate" gorm:"column:avg_rate"`
+	TotalRate             int64   `json:"total_rate" gorm:"column:total_rate"`
+	IsWatchlater          bool    `json:"is_watchlater" gorm:"column:is_watchlater"`
+	UserRating            int64   `json:"user_rating" gorm:"column:user_rating"`
+	Episode               int64   `json:"episode" gorm:"column:episode"`
+	CurrentEpisode        string  `json:"current_episode" gorm:"column:current_episode"`
+	ContentProviderID     string  `json:"content_provider_id" gorm:"column:content_provider_id"`
+	Slug                  string  `json:"slug" gorm:"column:slug"`
+	SeasonSlugSeo         string  `json:"season_slug_seo" gorm:"column:season_slug_seo"`
+	IsEnd                 bool    `json:"is_end" gorm:"column:is_end"`
+	IsDownloadable        int64   `json:"is_downloadable" gorm:"column:is_downloadable"`
+	NoSeeker              bool    `json:"no_seeker" gorm:"column:no_seeker"`
+	GeoCheck              int64   `json:"geo_check" gorm:"column:geo_check"`
+	RangePageIndex        int64   `json:"range_page_index" gorm:"column:range_page_index"`
+	DrmServiceName        string  `json:"drm_service_name" gorm:"column:drm_service_name"`
+	HaveTrailer           int64   `json:"have_trailer" gorm:"column:have_trailer"`
+	IsVip                 int64   `json:"is_vip" gorm:"column:is_vip"`
+	IntroStart            int64   `json:"intro_start" gorm:"column:intro_start"`
+	IntroEnd              int64   `json:"intro_end" gorm:"column:intro_end"`
+	OuttroStart           int64   `json:"outtro_start" gorm:"column:outtro_start"`
+	OuttroEnd             int64   `json:"outtro_end" gorm:"column:outtro_end"`
+	Category              int64   `json:"category" gorm:"column:category"`
+	SeasonName            string  `json:"season_name" gorm:"column:season_name"`
+	ShowName              string  `json:"show_name" gorm:"column:show_name"`
+	CreatedAt             int64   `json:"created_at" gorm:"column:created_at"`
+	RatingValue           string  `json:"rating_value" gorm:"column:rating_value"`
+	AuthorName            string  `json:"author_name" gorm:"column:author_name"`
+	ReviewBody            string  `json:"review_body" gorm:"column:review_body"`
+	IsComingSoon          int64   `json:"is_coming_soon" gorm:"column:is_coming_soon"`
+	AgeRange              string  `json:"age_range" gorm:"column:age_range"`
+	LabelSubtitleAudio    string  `json:"label_subtitle_audio" gorm:"column:label_subtitle_audio"`
+	LabelPublicDay        string  `json:"label_public_day" gorm:"column:label_public_day"`
+	Ranking               int64   `json:"ranking" gorm:"column:ranking"`
+	AwardDescription      string  `json:"award_description" gorm:"column:award_description"`
+	IsPremiumDisplay      string  `json:"is_premium_display" gorm:"column:is_premium_display"`
+	Status                int64   `json:"status" gorm:"column:status"`
+	TrialDuration         int64   `json:"trial_duration" gorm:"column:trial_duration"`
+	ExpireDate            string  `json:"expire_date" gorm:"column:expire_date"`
+	ForceLogin            int64   `json:"force_login" gorm:"column:force_login"`
+	WindowingMessage      string  `json:"windowing_message" gorm:"column:windowing_message"`
+	IsPremiere            int64   `json:"is_premiere" gorm:"column:is_premiere"`
+	ButtonLive            string  `json:"button_live" gorm:"column:button_live"`
+	PositionLiveCcu       string  `json:"position_live_ccu" gorm:"column:position_live_ccu"`
+	IsSimulcast           int64   `json:"is_simulcast" gorm:"column:is_simulcast"`
+	IsTriggerToApp        int64   `json:"is_trigger_to_app" gorm:"column:is_trigger_to_app"`
+	NumberTrialEpisode    int64   `json:"number_trial_episode" gorm:"column:number_trial_episode"`
+	IsTriggerRegister     int64   `json:"is_trigger_register" gorm:"column:is_trigger_register"`
+	ShowAotp              int64   `json:"show_aotp" gorm:"column:show_aotp"`
+	TimeOnTriggerProgress int64   `json:"time_on_trigger_progress" gorm:"column:time_on_trigger_progress"`
+	AgeRestricted         bool    `json:"age_restricted" gorm:"column:age_restricted"`
+	AllowsKid             bool    `json:"allows_kid" gorm:"column:allows_kid"`
+	HasObjectDetection    bool    `json:"has_object_detection" gorm:"column:has_object_detection"`
+	WarningMessage        string  `json:"warning_message" gorm:"column:warning_message"`
+	WarningScreen         string  `json:"warning_screen" gorm:"column:warning_screen"`
+	WarningTag            string  `json:"warning_tag" gorm:"column:warning_tag"`
+	CanLimit              bool    `json:"can_limit" gorm:"column:can_limit"`
+}
+
+type OnlyContentID struct {
+	RibbonID string `json:"ribbon_id" gorm:"column:ribbon_id;"`
+}
+
+func (Content) TableName() string       { return "contents" }
+func (OnlyContentID) TableName() string { return Content{}.TableName() }

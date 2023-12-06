@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  crawl_mysql:
+    image: mysql:latest
+    container_name: crawl_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: vieon
+      MYSQL_USER: user1
+      MYSQL_PASSWORD: 123456
+    volumes:
+      - ./docker/mysql/data:/var/lib/mysql
+      - ./docker/mysql/init:/docker-entrypoint-initdb.d
+    ports:
+      - "3306:3306"
+
+volumes:
+  mysql_data:
